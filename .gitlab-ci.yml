@@ -1,0 +1,31 @@
+image: golang:1.11
+
+variables:
+  REPO_NAME: gitlab.liu.se/danhe178/tdde06-lab3
+
+before_script:
+  - mkdir -p $GOPATH/src/$(dirname $REPO_NAME)
+  - ln -svf $CI_PROJECT_DIR $GOPATH/src/$REPO_NAME
+  - cd $GOPATH/src/$REPO_NAME
+  - go version
+  - go get github.com/mattn/go-sqlite3
+
+stages:
+    - build
+    - test
+    
+build:
+    stage: build
+    script:
+        - echo "Building again"
+        - go build todo.go
+    artifacts:
+        paths:
+            - todo
+
+test:
+    stage: test
+    script:
+        - echo "Testing"
+        - ls
+        - go test
