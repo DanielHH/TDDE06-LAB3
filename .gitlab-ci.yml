@@ -11,14 +11,13 @@ before_script:
 stages:
     - build
     - test
-    - run
     
 build:
     stage: build
     script:
         - echo "Building again"
         - sqlite3 foo.db < schema.sql
-        - go build todo.go
+        - go build -X todo.go
     artifacts:
         paths:
             - todo
