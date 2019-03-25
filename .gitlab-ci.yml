@@ -21,6 +21,7 @@ build:
     artifacts:
         paths:
             - todo
+            - db_name
 
 test:
     stage: test
