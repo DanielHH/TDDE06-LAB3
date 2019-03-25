@@ -5,7 +5,7 @@ variables:
 
 before_script:
   - go version
-  - go get github.com/mattn/go-sqlite3
+  - go get -d -v ./...
 
 stages:
     - build
