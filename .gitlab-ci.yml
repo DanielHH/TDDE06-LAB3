@@ -28,4 +28,4 @@ test:
     script:
         - echo "Testing"
         - ls
-        - go test -x
+        - go test
