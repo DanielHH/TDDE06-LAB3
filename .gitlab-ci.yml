@@ -7,7 +7,7 @@ before_script:
   - go version
   - go get -d -v ./...
   - apt-get -qq update
-  - apt-get install -y postgresql
+  - apt-get install -y sqlite3-doc
 
 stages:
     - build
@@ -17,12 +17,12 @@ build:
     stage: build
     script:
         - echo "Building again"
-        - psql -f schema.sql db_name
+        - sqlite3 foo.db < schema.sql
         - go build todo.go
     artifacts:
         paths:
             - todo
-            - db_name
+            - foo.db
 
 test:
     stage: test
