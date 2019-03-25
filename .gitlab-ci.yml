@@ -15,7 +15,7 @@ stages:
 build:
     stage: build
     script:
-        - echo "Building again"
+        - echo "Building"
         - sqlite3 foo.db < schema.sql
         - go build -x todo.go
     artifacts:
