@@ -14,8 +14,6 @@ stages:
     - build
     - test
     
-timeout: 3
-    
 build:
     stage: build
     script:
