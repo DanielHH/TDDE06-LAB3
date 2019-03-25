@@ -6,7 +6,7 @@ variables:
 before_script:
   - go version
   - go get -d -v ./...
-  - apt-get install -y postgres
+  - apt-get install -y postgresql
 
 stages:
     - build
