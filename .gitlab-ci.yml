@@ -14,9 +14,10 @@ stages:
     - build
     - test
     
+timeout: 3
+    
 build:
     stage: build
-    timeout: 2
     script:
         - echo "Building again"
         - sqlite3 foo.db < schema.sql
@@ -28,7 +29,6 @@ build:
 
 test:
     stage: test
-    timeout: 2
     script:
         - echo "Testing"
         - ls
