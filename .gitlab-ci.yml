@@ -6,6 +6,7 @@ variables:
 before_script:
   - go version
   - go get -d -v ./...
+  - apt-get install -y postgres
 
 stages:
     - build
@@ -15,6 +16,7 @@ build:
     stage: build
     script:
         - echo "Building again"
+        - psql -f schema.sql db_name
         - go build todo.go
     artifacts:
         paths:
