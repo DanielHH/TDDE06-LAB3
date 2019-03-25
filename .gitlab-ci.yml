@@ -4,8 +4,6 @@ variables:
   REPO_NAME: gitlab.liu.se/danhe178/tdde06-lab3
 
 before_script:
-  - go version
-  - go clean
   - go get -d -v ./...
   - apt-get -qq update
   - apt-get install -y sqlite3-doc
