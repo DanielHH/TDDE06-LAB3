@@ -4,7 +4,7 @@ variables:
   REPO_NAME: gitlab.liu.se/danhe178/tdde06-lab3
 
 before_script:
-  - go get -d -v ./...
+ # - go get -d -v ./...
   - apt-get -qq update
   - apt-get install -y sqlite3-doc
 
@@ -17,7 +17,7 @@ build:
     script:
         - echo "Building"
         - sqlite3 foo.db < schema.sql
-        - go build todo.go
+      #  - go build todo.go
     artifacts:
         paths:
             - todo
