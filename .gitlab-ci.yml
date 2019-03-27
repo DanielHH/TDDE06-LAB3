@@ -23,6 +23,13 @@ build:
         paths:
             - todo
             - foo.db
+            
+run:
+    stage: run
+    script:
+        - echo "Running"
+        - ls
+        - go run -exec todo.exe
 
 test:
     stage: test
@@ -30,10 +37,3 @@ test:
         - echo "Testing"
         - ls
         - go test
-        
-run:
-    stage: run
-    script:
-        - echo "Running"
-        - ls
-        - go run -exec
