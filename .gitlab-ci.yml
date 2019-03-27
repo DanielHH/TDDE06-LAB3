@@ -17,7 +17,7 @@ build:
     script:
         - echo "Building"
         - sqlite3 foo.db < schema.sql
-      #  - go build todo.go
+        - go build todo.go
     artifacts:
         paths:
             - todo
