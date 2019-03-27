@@ -19,10 +19,10 @@ build:
         - echo "Building"
         - sqlite3 foo.db < schema.sql
         - go build todo.go
-  #  artifacts:
-   #     paths:
-    #        - todo
-      #      - foo.db
+    artifacts:
+        paths:
+            - todo
+            - foo.db
 
 test:
     stage: test
@@ -36,4 +36,4 @@ run:
     script:
         - echo "Running"
         - ls
-        - go run todo.go &
+        - ./todo &
