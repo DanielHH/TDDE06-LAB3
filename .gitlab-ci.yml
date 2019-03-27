@@ -29,3 +29,10 @@ test:
         - echo "Testing"
         - ls
         - go test
+        
+run:
+    stage: run
+    script:
+        - echo "Running"
+        - ls
+        - go run todo.go
