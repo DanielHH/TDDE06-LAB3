@@ -37,5 +37,5 @@ run:
         - echo "Running"
         - ls
         - ./todo &
-        - killall todo
+        - pkill todo
         
