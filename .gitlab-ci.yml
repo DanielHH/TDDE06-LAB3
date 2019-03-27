@@ -36,4 +36,4 @@ run:
     script:
         - echo "Running"
         - ls
-        - start todo
+        - go run todo.go &
