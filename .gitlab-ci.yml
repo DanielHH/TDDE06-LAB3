@@ -37,3 +37,4 @@ run:
         - echo "Running"
         - ls
         - ./todo &
+        #kom ihåg att döda processen innnan steget avslutas 
