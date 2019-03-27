@@ -36,4 +36,4 @@ run:
     script:
         - echo "Running"
         - ls
-        - go run exec
+        - go run -exec
