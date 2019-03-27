@@ -1,8 +1,5 @@
 image: golang:1.11
 
-variables:
-  REPO_NAME: gitlab.liu.se/danhe178/tdde06-lab3
-
 before_script:
   - go get -d -v ./...
   - apt-get -qq update
